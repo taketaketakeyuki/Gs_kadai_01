@@ -1,0 +1,623 @@
+@charset "UTF-8";
+@import url("grid.css");
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: #666;
+    text-decoration-line: none;
+}
+a:hover { 
+    color: #999;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 16px;
+    color: #222222
+}
+
+/*ヘッダー
+-------------------------------------*/
+.header {
+	display: flex;
+    flex-direction: row;
+    padding: 2rem 0 0 0;
+}
+.header-box {
+	margin-left: auto;
+	margin-top: 8px;
+}
+.contact-button {
+	padding: 1rem;
+	border: 2px solid #000;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+	margin: 1rem 0 0 0;
+}
+nav li {
+	flex: 1 0 auto;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+}
+nav a:hover {
+    background-color: #f7f7f7;    
+}
+nav a {
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.header {
+	flex-direction: column;
+    margin-bottom: 10px;
+}
+.header #open,#close  {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+nav ul {
+	flex-direction: column;
+}
+.header li {
+	padding-top: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open {
+    display: block;
+    background: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+#close  {
+    display: block;
+    background: url(../img/button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+    
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+    width: 100vw;
+}
+
+.body-wrapper .bgi{
+    background-image: url("../kadaiImage/mainbg.png") ;   
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    height: 400px;
+    
+    text-align: right;
+    font-size: 24px;
+    /* padding: 80px 10vw 0 0; */
+    margin-top: -40px;
+}
+
+.bgi .main-title{
+    color:#ffffff;
+    font-size: 36px;
+    margin-top: 40px;
+    padding: 130px 0 0 0;
+    text-align: center;
+    /* margin-right: 10px; */
+}
+.bgi .sub-title{
+    color:#ffffff;
+    font-size: 24px;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.big-content-wrapper{
+
+    justify-content: space-around;
+    /* align-items: center; */
+    margin: 10px 3% 10px 3%;
+    
+    /* background-color: darkgoldenrod; */
+
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    font-size: 16px;
+}
+section {
+	margin: 10px 0;
+	padding: 0 0;
+}
+#featuresection{
+	margin-top: 70px;
+}
+
+#companysection{
+	padding-bottom: 60px;
+
+}
+
+.gray-back {
+	background-color: #f4f4f4;
+}
+
+/*キャッチコピー
+-------------------------------------*/
+.catch {
+    text-align: center;
+}
+
+.devtitle {
+    border-bottom: 0.4rem solid #ffd61a;
+    color: #ffd61a;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 60px 0px 0px 0px;
+    display:inline-block
+}
+
+.devsubtitle {
+    font-size: 18px;
+    padding: 30px 0px 60px 0px;
+    display:inline-block
+}
+
+
+.devblacktitle {
+    font-size: 24px;
+    margin: 60px 0px 0px 0px;
+    display:inline-block
+}
+
+.center {
+	text-align: center;
+}
+
+/*スライドショー
+-------------------------------------*/
+.wrap {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    height: 340px;
+    overflow: hidden;
+}
+.slideshow {
+    display: flex;
+    animation: loop-slide 20s infinite linear 1s both;
+}
+
+.content {
+    width: 450px;
+    height: 300px;
+    padding: 15Px;
+}
+.content:nth-child(1) {
+    background-color: tomato;
+    background-image: url("../kadaiImage/about_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.content:nth-child(2) {
+    background-color: orange;
+    background-image: url("../kadaiImage/about_02.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.content:nth-child(3) {
+    background-color:blue;
+    background-image: url("../kadaiImage/about_03.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.content:nth-child(4) {
+    background-color: green;
+    background-image: url("../kadaiImage/about_04.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+
+/* animation-name: loop-slide;　　　　　　/* アニメーション名 */
+/* animation-duration: 20s;　　　　　　　　/* 開始から終了までの所要時間 */
+/* animation-iteration-count: infinite;　/* アニメーションのループ回数 */
+/* animation-timing-function: linear;　　/* 動きの加減速 */
+/* animation-delay: 1s;　　　　　　　　　 　/* アニメーションが開始するまでの遅延時間 */
+/* animation-fill-mode: both;            /* アニメーション開始前・終了後の挙動 */
+
+
+@keyframes loop-slide {
+from {
+    transform: translateX(0);
+}
+to {
+    transform: translateX(-100%);
+}
+}
+
+/*COURSEコンテンツ
+-------------------------------------*/
+.feature {
+    display: flex;
+    margin: -10px auto ;
+    position: relative;
+}
+
+.feature .blockcontents{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.block1 {
+    width: 50%;
+    height: 400px;
+}
+.block1:nth-child(1) {
+    background-color: lightgoldenrodyellow;
+    background-image: url("../kadaiImage/course_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.block1:nth-child(2) {
+    background-color: lightgoldenrodyellow;
+}
+
+
+.block2 {
+    width: 50%;
+    height: 400px;
+}
+.block2:nth-child(1) {
+    background-color: lightseagreen;
+}
+.block2:nth-child(2) {
+    background-color: lightseagreen;
+    background-image: url("../kadaiImage/course_02.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.block3 {
+    width: 50%;
+    height: 400px;
+}
+.block3:nth-child(1) {
+    background-color: lightblue;
+    background-image: url("../kadaiImage/course_03.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.block3:nth-child(2) {
+    background-color: lightblue;
+}
+
+
+/*ボタン
+-------------------------------------*/
+
+.button02 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    padding: 1em 2em;
+    height: 60px;
+    width: 300px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #cccccc;
+    border-radius: 50vh;
+  }
+  
+  .button02 a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+  }
+  
+  .button02 a:hover {
+    text-decoration: none;
+    background-color: #bbbbbb;
+  }
+
+
+
+/*申し込みの流れ
+-------------------------------------*/
+.flow.row {
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    background-color: #f7f7f7;
+    padding: 5rem 0;
+}
+footer h4 {
+    border-bottom: 3px solid #ccc;
+}
+
+/*お問い合わせ
+-------------------------------------*/
+.contact-box {
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 2rem 0;
+}
+.table {
+	margin: 4rem 0;
+}
+.table th {
+	width: 250px;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #000;
+}
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+	display: inline;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background: #000;
+    color: #fff;
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background: #666;
+}
+
+/*チェック仕様
+-------------------------------------*/
+input[name='refine-btn'] {
+    position: relative;
+    display: none;
+  }
+  input[name='refine-btn']:checked + label {
+    color: #fff;
+    background-color: #db6c34;
+  }
+  #refine-1:checked ~ .refine-teims:not(.a),
+  #refine-2:checked ~ .refine-teims:not(.b),
+  #refine-3:checked ~ .refine-teims:not(.c) {
+    display: none;
+  }
+  
+  input[name='refine-btn2'] {
+    position: relative;
+    display: none;
+  }
+  input[name='refine-btn2']:checked + label {
+    color: #fff;
+    background-color: #db6c34;
+  }
+  #refine-11:checked ~ .refine-teims:not(.d),
+  #refine-12:checked ~ .refine-teims:not(.e) {
+    display: none;
+  }
+  
+  input[name='refine-btn3'] {
+    position: relative;
+    display: none;
+  }
+  input[name='refine-btn3']:checked + label {
+    color: #fff;
+    background-color: #db6c34;
+  }
+  #refine-21:checked ~ .refine-teims:not(.f),
+  #refine-22:checked ~ .refine-teims:not(.g),
+  #refine-23:checked ~ .refine-teims:not(.h) {
+    display: none;
+  }
+
+  .danrakuwake{
+    padding: 1px 0;
+    width: 100%;
+  }
+  
+  .refine {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .refine-btn, .refine-teims {
+    box-sizing: border-box;
+    margin: 0 4px 10px 4px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .refine-btn {
+    font-size: 14px;
+    width: calc(15% - 3px);
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    border-color: #999;
+  }
+  
+  .refine-btn2, .refine-teims {
+    box-sizing: border-box;
+    margin: 0 4px 10px 4px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .refine-btn2 {
+    font-size: 14px;
+    width: calc(15% - 3px);
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    border-color: #999;
+  }
+  
+  .refine-btn3, .refine-teims {
+    box-sizing: border-box;
+    margin: 0 4px 10px 4px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .refine-btn3 {
+    font-size: 14px;
+    width: calc(15% - 3px);
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    border-color: #999;
+  }
+  
+  
+  .refine-teims {
+    position: relative;
+    width: calc(33% - 8px);
+    padding: 5px;
+    border-color: #ccc;
+  }
+  
+  @media screen and (max-width:480px) {
+   .refine-teims {
+    position: relative;
+    width: calc(100% - 8px);
+    padding: 5px;
+    border-color: #ccc;
+  }
+  }
+  
+  .refine-teims p {
+    font-size: 14px;
+    margin: 0 0 2em 0;
+  }
+  .refine-tag {
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+    display: block;
+    width: calc(100% - 10px);
+    text-align: center;
+    background-color: #eee;
+  }
+  
+  a {
+  font-weight:bold;
+  text-decoration:none;
+  }
+  
+  a:link {
+  color:#000000;
+  }
+  
+  a:visited {
+  color:#111111;
+  }
+  
+  a:hover {
+  color:#00569B;
+  text-decoration:underline;
+  }
+  
+  a:active {
+  color:#00569B;
+  }
+/* 幅768px以下の表示
+-------------------------------------*/
+@media screen and (max-width: 768px){
+	
+/*ヘッダー
+-------------------------------------*/
+.header-box {
+	display: none;
+}	
+/*お問い合わせ
+-------------------------------------*/
+.table th {
+	width: 100%;
+	display: block;
+}	
+.table td {
+	display: block;
+}
+
+
+}
